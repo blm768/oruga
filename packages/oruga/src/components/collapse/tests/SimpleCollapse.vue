@@ -1,9 +1,11 @@
 <script lang="ts">
 import { defineComponent } from "vue";
 import OCollapse from "../Collapse.vue";
+import OIcon from "../../icon/Icon.vue";
 export default defineComponent({
     components: {
         [OCollapse.name]: OCollapse,
+        [OIcon.name]: OIcon,
     },
     data() {
         return {
@@ -34,12 +36,12 @@ export default defineComponent({
             :key="index"
             class="card"
             animation="slide"
+            :data-testid="`collapse-${index}`"
             :open="isOpen == index"
             @open="isOpen = index">
             <template #trigger="props">
                 <div
                     class="card-header"
-                    role="button"
                     :aria-controls="'contentIdForA11y5-' + index"
                     :aria-expanded="isOpen == index">
                     <p class="card-header-title">
@@ -51,7 +53,7 @@ export default defineComponent({
                     </a>
                 </div>
             </template>
-            <div class="card-content">
+            <div class="card-content" :data-testid="`content-${index}`">
                 <div class="content">
                     {{ collapse.text }}
                 </div>
