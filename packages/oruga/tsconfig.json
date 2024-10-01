@@ -11,7 +11,12 @@
     "noImplicitAny": false,
     "strictNullChecks": false,
     "baseUrl": ".",
-    "types": ["node", "vite/client", "./components.d.ts"],
+    "types": [
+      "node",
+      "vite/client",
+      "@vitest/browser/providers/playwright",
+      "./components.d.ts"
+    ],
     "paths": {
       "@/*": ["src/*"],
       "@oruga-ui/oruga-next": ["src/index"],

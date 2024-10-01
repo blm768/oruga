@@ -32,9 +32,12 @@
     "postversion": "echo \"You can now publish your tag with 'git push --follow-tags'\""
   },
   "devDependencies": {
+    "@vitest/browser": "^2.1.4",
     "concurrently": "^8.2.2",
     "conventional-changelog": "^6.0.0",
     "conventional-changelog-cli": "^5.0.0",
-    "replace-in-file": "^7.2.0"
+    "playwright": "^1.48.2",
+    "replace-in-file": "^7.2.0",
+    "vitest-browser-vue": "^0.0.1"
   }
 }
